@@ -29,8 +29,8 @@ capstone3-purwadhika/
 │
 ├── README.md                                   # Dokumentasi proyek (file ini)
 ├── Ecommerce_Churn-Final.ipynb                 # End-to-end Jupyter
-├── data_ecommerce_customer_churn.csv          # Dataset mentah
-└── Model                                       # Dataset bersih hasil data cleaning
+├── data_ecommerce_customer_churn.csv           # Dataset mentah
+└── Model                                       
       └── preprocessor.pkl                      # Saved final model via Pickle
       └── best_rf_model.pkl                     # Saved final model via Pickle
 ```
@@ -428,25 +428,10 @@ Kelemahan utama: sangat rentan terhadap overfitting — terbukti dari Train Reca
 
 ---
 
-### Load Saved Model
-```python
-import pickle
-
-# Load final model
-with open('model/best_model_rf_tuned.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-# Predict with optimal threshold (0.4)
-y_pred_proba = model.predict_proba(X_new)[:, 1]
-y_pred = (y_pred_proba >= 0.4).astype(int)
-```
-
----
-
 ## 🔗 Link Deliverables
 
 | Deliverables | Link |
 |---|---|
 | 📓 Jupyter Notebook | *https://github.com/lauziafadhilanareswari/capstone3-purwadhika.git* |
 | 🎞️ Slide Presentasi | *https://drive.google.com/file/d/1KKxeZy9rd-BRHAkro6ve48C1zcq07T8O/view?usp=sharing* |
-| 🎥 Video Penjelasan | *YouTube: https://youtu.be/vw33FPv63F0 / Google Drive: https://drive.google.com/file/d/15IydmfIhRSz0km7z0MKvWqxFp2f9d3gt/view?usp=sharing* |
+| 🎥 Video Penjelasan | *YouTube: https://youtu.be/E458-iIqjn8 / Google Drive: https://drive.google.com/file/d/15IydmfIhRSz0km7z0MKvWqxFp2f9d3gt/view?usp=sharing* |
